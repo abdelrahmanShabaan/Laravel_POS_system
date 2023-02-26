@@ -1,9 +1,9 @@
 <?php
 
 namespace App\Http\Controllers\Invoice;
-use App\Invoice;
 
 use App\Http\Controllers\Controller;
+use App\Invoice;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Route;
 use Illuminate\Support\Facades\Mail;
