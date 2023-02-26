@@ -3,7 +3,8 @@
 namespace App\Http\Controllers\Invoice;
 
 use App\Http\Controllers\Controller;
-use App\Invoice;
+use App\Models\Invoice;
+
 use Illuminate\Http\Request;
 use Illuminate\Routing\Route;
 use Illuminate\Support\Facades\Mail;
@@ -13,12 +14,10 @@ class InvoiceController extends Controller
    
     public function index()
     {
+        $invoices = Invoice::orderBy('id', 'desc')->paginate(10);
 
-
-        return view('frontend.index');
-
+        return view('frontend.index', compact('invoices'));
     }
-
     
     public function create()
     {
