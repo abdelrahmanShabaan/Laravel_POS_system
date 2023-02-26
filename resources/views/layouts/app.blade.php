@@ -47,14 +47,14 @@
                             @if (Route::has('login'))
                                 <li class="nav-item px-2">
                                     <!-- <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a> -->
-                                    <a class="btn btn-primary" href="">عربي</a>
+                                    <a class="btn btn-primary" href="{{ route('frontend_change_locale', 'ar') }}">عربي</a>
                                 </li>
                             @endif
 
                             @if (Route::has('register'))
                                 <li class="nav-item px-2">
                                     <!-- <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a> -->
-                                    <a class="btn btn-secondary" href="">English</a>
+                                    <a class="btn btn-secondary"  href="{{ route('frontend_change_locale', 'en') }}">English</a>
                                 </li>
                             @endif
                         @else
