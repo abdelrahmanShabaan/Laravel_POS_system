@@ -16,10 +16,12 @@ class InvoiceController extends Controller
 
     }
 
+    
     public function create()
     {
-        //
+        return view('frontend.create');
     }
+
 
  
     public function store(Request $request)

@@ -24,6 +24,7 @@ Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 // OUR pos Routes
 Route::resource('/' , InvoiceController::class);
+Route::resource('invoice', InvoiceController::class);
 
 
 Route::get('change-language/{locale}',[GeneralController::class, 'changeLanguage'])->name('frontend_change_locale');
